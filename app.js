@@ -114,8 +114,6 @@ if(e.target.matches(".form [required]")){
    let $input = e.target;
    let pattern = $input.pattern || $input.dataset.pattern;
    
-   
-   //console.log($input, pattern)
 
 if(pattern && $input.value !== ""){
    let regex = new RegExp(pattern);
@@ -123,7 +121,31 @@ if(pattern && $input.value !== ""){
    ?d.getElementById($input.name).classList.add("is-active")
    :d.getElementById($input.name).classList.remove("is-active");
 
-}
+      }
+   }
+})
 
-}
+
+d.addEventListener("submit",(e)=>{
+   e.preventDefault();
+
+
+   let $loader = d.querySelector(".contact-form-loader");
+   let $submit = d.querySelector(".contact-form-response");
+
+
+   $loader.classList.remove("none");
+
+
+
+   setTimeout(()=>{
+      $loader.classList.add("none");
+      $submit.classList.remove("none");
+      $form.reset();
+
+
+      
+      setTimeout(()=> $submit.classList.add("none"),3000)
+
+   },3000)
 })

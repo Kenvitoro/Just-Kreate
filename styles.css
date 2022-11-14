@@ -416,22 +416,18 @@ body {
     height: 40px;
 }
 
-.form button[type="submit"] {
-    width: 100px;
-}
-
-
 
 .form button[type="submit"] {
     font-size: 19px;
     border: #000 solid 2px;
+    box-shadow: none;
     background-color: transparent;
     width: 160px;
     height: 50px;
     position: absolute;
     left: 230px;
     top: 580px;
-    font-weight: bolder;
+    font-weight: bold;
     font-family: 'Bebas Neue', cursive;
     letter-spacing: 2px;
     cursor: pointer;
@@ -480,11 +476,21 @@ body {
     height: 30px;
     text-align: center;
     padding-top: 5px;
-    ;
     margin-top: 0.1rem;
     background-color: red;
     color: #fff;
     font-weight: bolder;
+}
+
+.contact-form-loader{
+    margin-top: 30px;
+}
+
+.contact-form-response{
+    margin-top: -40px;
+    font-size: 22px;
+    font-family: 'Bebas Neue', cursive;
+    border-bottom: #161817 1px dotted;
 }
 
 .none{
