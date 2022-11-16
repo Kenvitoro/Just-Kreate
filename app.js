@@ -98,7 +98,7 @@ const d = document;
 const $form = d.querySelector(".form");
 const $inputs = d.querySelectorAll(".form [required]");
 
-console.log($inputs);
+
 
 $inputs.forEach((input) => {
    const $span = d.createElement("span");
@@ -138,7 +138,27 @@ d.addEventListener("submit",(e)=>{
 
 
 
-   setTimeout(()=>{
+   fetch("https://formsubmit.co/ajax/andreskmora@gmail.com",{
+      method: "POST",
+      body: new FormData(e.target)
+   })
+      .then(res=>res.ok?res.json():Promise.reject(res))
+      .then(json=>{
+         $loader.classList.add("none");
+         $submit.classList.remove("none");
+        /* $submit.innerHTML = `<p>${json.message}</p>`*/
+        $submit.innerHTML = `<p>Los datos han sido enviados</p>`
+         $form.reset();
+      })
+      .catch(err=>{
+         console.log(err);
+         let message = err.statusText || "Ocurrio un error al enviar, intenta nuevamente";
+         $submit.innerHTML = `Error: ${err.status}:${message}}`
+      })
+
+      .finally(()=>setTimeout(()=> $submit.classList.add("none"),3000))
+
+  /* setTimeout(()=>{
       $loader.classList.add("none");
       $submit.classList.remove("none");
       $form.reset();
@@ -147,5 +167,5 @@ d.addEventListener("submit",(e)=>{
       
       setTimeout(()=> $submit.classList.add("none"),3000)
 
-   },3000)
+   },3000)*/
 })
