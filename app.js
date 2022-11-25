@@ -9,7 +9,7 @@ btnToggle.addEventListener("click", ()=>{
 
    }else{
       btnToggle.classList.remove("get-rotated")
-      navLinks.style.left = "-500px";
+      navLinks.style.left = "-300px";
    }
 })
 
