@@ -1,3 +1,22 @@
+/*NAV-RESPONSIVE*/
+const navLinks = document.querySelector(".nav-links");
+const btnToggle = document.querySelector(".btn-toggle");
+
+btnToggle.addEventListener("click", ()=>{
+   if(!btnToggle.classList.contains("get-rotated")){
+      btnToggle.classList.add("get-rotated")
+      navLinks.style.left = "0";
+
+   }else{
+      btnToggle.classList.remove("get-rotated")
+      navLinks.style.left = "-500px";
+   }
+})
+
+
+
+
+
 /*slider producto */
 let btnRP = document.getElementById("btn-rightP");
 let btnLP = document.getElementById("btn-leftP");
@@ -158,14 +177,4 @@ d.addEventListener("submit",(e)=>{
 
       .finally(()=>setTimeout(()=> $submit.classList.add("none"),3000))
 
-  /* setTimeout(()=>{
-      $loader.classList.add("none");
-      $submit.classList.remove("none");
-      $form.reset();
-
-
-      
-      setTimeout(()=> $submit.classList.add("none"),3000)
-
-   },3000)*/
 })
