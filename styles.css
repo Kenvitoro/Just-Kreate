@@ -928,6 +928,42 @@ body {
         font-size: 20px;
     }
 
+    .about-me_description h3 {
+        font-size: 35px;
+    }
+    
+    .about-me_description p {
+        font-size: 25px;
+        line-height: 25px;
+    }
+    
+    
+    .skillsAndLeng .skills h4,
+    .skillsAndLeng .leng h4 {
+        font-size: 30px;
+    }
+    
+    .skillsAndLeng .skills ul,
+    .skillsAndLeng .leng ul {
+        font-size: 20px;
+    }
+
+    .skillsAndLeng .skills li,
+    .skillsAndLeng .leng li {
+        font-size: 20px;
+    }
+
+    .form-case .form-text h3 {
+        font-family: 'Bebas Neue', cursive;
+        font-size: 45px;
+    }
+    
+    .form-case .form-text h4 {
+        font-family: 'Bebas Neue', cursive;
+        font-size: 35px;
+    }
+    
+
 }
 
 
