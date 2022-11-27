@@ -642,6 +642,10 @@ body {
     .about-me_description {
         width: 50%;
     }
+
+    .about-me_description {
+        margin-right: 0;
+     }      
     
 }
 
@@ -793,6 +797,13 @@ body {
 
     .home .description{
         height: 85%;
+        width: 95%;
+    }
+
+
+    .description .actionBtn{
+        margin-top: 0;
+        margin-right: 0;
     }
 
     .home .description h1{
@@ -843,7 +854,7 @@ body {
 @media (max-width: 800px){
 
     .form button[type="submit"] {
-        top: 550px;
+        top: 510px;
         left: 50px;
     }
    
