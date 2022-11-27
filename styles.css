@@ -732,7 +732,7 @@ body {
 
 
 
-@media (max-width: 940px){
+@media (max-height: 930px) and  (max-width: 940px){
 
     .nav-links{
         position: fixed;
@@ -831,13 +831,31 @@ body {
     .slider__section img {
         object-fit: contain;
     }
+
+    .slider-btn {
+        font-size: 16px;
+        height: 35px;
+        width: 35px;
+    }
 }
+
+
+@media (max-width: 800px){
+
+    .form button[type="submit"] {
+        top: 550px;
+        left: 50px;
+    }
+   
+}
+
 
 @media (max-width: 647px){
     .home{
         flex-direction: column-reverse;
         gap: 20px;
-        padding-top: 90px;
+        padding-top: 30px;
+        height: 100vh;
     }
 
     .home img{
@@ -870,7 +888,7 @@ body {
     }
 
     .about-me{
-        height: 100vh;
+        height: 120vh;
         flex-direction: column;
     }
 
@@ -885,6 +903,31 @@ body {
         width: 90%;
         text-align: center;
     }
+
+    .form button[type="submit"] {
+        left: 50px;
+    }
+}
+
+
+@media (max-width: 515px){
+
+    .home .description{
+        line-height: 0.8;
+    }
+    
+    .home .description h1 {
+        font-size: 35px;
+    }
+    
+    .home .description h3 {
+        font-size: 28px;
+    }
+    
+    .home .description p {
+        font-size: 20px;
+    }
+
 }
 
 
@@ -901,4 +944,9 @@ body {
     .home .description p {
         font-size: 18px;
     }
+
+    .slider-btn {
+       top: 40%;
+    }
+
 }
